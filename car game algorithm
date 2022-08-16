@@ -1,0 +1,26 @@
+# python
+just a rough work
+start = input('Enter "help" to see instruction: ').lower()
+
+if start == 'help':
+    started = False
+
+  
+    while True:
+        user_input = input('start - car started\nstop - car stopped \nquit - it will stop\nwhat operation do you want to perform:').lower()
+        if user_input == "start":
+            if started:
+                print("\nTHE CAR IS ALREADY STARTED ON.\n")
+            else:
+                started = True
+                print('\nTHE CAR HAS ALREADY STARTED NOW WHAT?\n')
+        elif user_input == "stop":
+            if not started:
+                print('\nTHE CAR IS ALREADY STOPPED.\n')
+            else:
+                started = False
+                print('\nTHE CAR HAS STOPPED. NOW WHAT\n')
+        elif user_input == 'quit':
+            break
+else:
+    print('This is not a valid command')
