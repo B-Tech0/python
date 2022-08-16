@@ -1,0 +1,24 @@
+# python
+just a rough work
+import tkinter as ui
+import time
+
+
+window = ui.Tk()
+window.geometry("400x400")
+def update_clock():
+    hours = time.strftime("%I")
+    minutes = time.strftime("%H")
+    seconds = time.strftime("%S")
+    am_or_pm = time.strftime("%p")
+    time_text = hours + ":" + minutes + ":" + seconds + "" + am_or_pm
+    
+canvas = ui.canvas(window, width=400, height=400,bg="black")
+canvas.pack(expand=True, fill='both')
+
+#create background
+bg = ui.PhotoImage(file='it.jpg')
+canvas.create_image(200, 200, image=bg)
+update_clock()
+
+window.mainloop()
