@@ -1,0 +1,7 @@
+# python
+just a rough work
+import qrcode
+
+img = qrcode.make("https://www.coursera.org/learn/iot/lecture/29L9c/lecture-2-1-microcontroller-components")
+
+img.save("bitcoin.jpg")
